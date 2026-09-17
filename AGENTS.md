@@ -1141,9 +1141,9 @@ fallback for URL schemes if `Native.load` fails.
 plugin and opens that plugin's panel, exactly as the workspace button already did with
 `open-workspace-picker`; both helpers live in `components/plugin/TopOfMindActions.kt`.
 
-**The panel id is `PanelId("top-of-mind", 5)`, not `PanelIds.TOP_OF_MIND`.** That constant is
+**The panel id is `PanelId("top-of-mind", 5)`.** The removed `TOP_OF_MIND` constant used
 `PanelId("topofmind", 2)` - a different id string from the one the plugin registers - so opening by
-it matches nothing at all, silently. Only the `panelId` and `pluginId` are compared, so the order
+it matched nothing at all, silently. Only the `panelId` and `pluginId` are compared, so the order
 is carried for honesty rather than for matching.
 
 **When `dispatch` returns false there is no fallback dialog, and that is the point.** Falling back

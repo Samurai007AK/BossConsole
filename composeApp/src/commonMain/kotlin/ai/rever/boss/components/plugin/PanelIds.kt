@@ -4,7 +4,7 @@ import ai.rever.boss.plugin.api.PanelId
 
 /**
  * Well-known panel IDs used by the host application.
- * These IDs are shared between the host app and dynamic plugins.
+ * The host uses these IDs to address panels registered by dynamic plugins.
  *
  * Kept minimal on purpose: only entries with host callers live here.
  * Adding a panel? Add its constant alongside its first caller so the table cannot drift silently (see #719).
@@ -17,7 +17,6 @@ object PanelIds {
 
     // Right panel plugins
     val TERMINAL = PanelId("terminal", 2)
-    val PERFORMANCE = PanelId("performance", 2)
 
     // Admin/Security panels
     val SECRET_MANAGER = PanelId("secret-manager", 2)

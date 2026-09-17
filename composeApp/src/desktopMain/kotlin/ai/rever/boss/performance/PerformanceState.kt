@@ -48,8 +48,8 @@ actual object PerformanceState {
     /**
      * Order 15, matching what the plugin declares in its own `PerformanceInfo`.
      *
-     * Not `PanelIds.PERFORMANCE`, which says order 2. The panel registry keys on the whole
-     * `PanelId` including its order, so the two are different keys and the wrong one silently
+     * The removed `PERFORMANCE` constant used order 2. The panel registry keys on the whole
+     * `PanelId` including its order, so those are different keys and the wrong one silently
      * matches nothing.
      */
     private val PERFORMANCE_PANEL = PanelId("performance", 15)
